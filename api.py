@@ -15,7 +15,7 @@ def spotify_callback():
     return "You finally called me back!"
 
 ###Facebook####
-@app.route("/facebook/callback", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def receive_message():
     if request.method == 'GET':
         """Before allowing people to message your bot, Facebook has implemented a verify token
