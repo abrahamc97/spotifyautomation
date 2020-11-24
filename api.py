@@ -1,12 +1,12 @@
+import os
 import random
 import pymessenger
 from flask import Flask, request
 from pymessenger.bot import Bot
-from secrets import access_token, verify_token
 
 app = Flask(__name__)
-ACCESS_TOKEN = access_token
-VERIFY_TOKEN = verify_token
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 bot = Bot(ACCESS_TOKEN)
 
 ###Spotify###
