@@ -4,14 +4,14 @@ import pymessenger
 from flask import Flask, request
 from pymessenger.bot import Bot
 
-def runFlask():
-    app = Flask(__name__)
-    ###Spotify###
-    @app.route("/spotify/callback")
-    def spotify_callback():
-        return "You finally called me back!"
-    app.run()
-    return
+
+app = Flask(__name__)
+###Spotify###
+@app.route("/spotify/callback")
+def spotify_callback():
+    return "You finally called me back!"
+app.run()
+
 
 # ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 # VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
